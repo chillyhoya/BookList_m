@@ -16,7 +16,7 @@ import com.example.booklist.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class BookListFragment extends Fragment {
+public class BookListFragment extends Fragment {//由布局生成相应的视图
 
     private BookListMainActivity.BookAdapter bookAdapter;
     public BookListFragment(BookListMainActivity.BookAdapter bookAdapter) {

@@ -22,14 +22,14 @@ public class EditBookActivity extends AppCompatActivity {
         buttonOK=(Button)findViewById(R.id.button_ok);
         buttonCancel=(Button)findViewById(R.id.button_cancel);
 
-        editTextBookTitle.setText(getIntent().getStringExtra("title"));
+        editTextBookTitle.setText(getIntent().getStringExtra("title"));//在图书编辑页面接收main传来的内容
         insertPosition=getIntent().getIntExtra("position",0);
 
         buttonOK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent();
-                intent.putExtra("title",editTextBookTitle.getText().toString());
+                intent.putExtra("title",editTextBookTitle.getText().toString());//把数据传回去
                 intent.putExtra("position",insertPosition);
                 setResult(RESULT_OK,intent);
                 EditBookActivity.this.finish();
