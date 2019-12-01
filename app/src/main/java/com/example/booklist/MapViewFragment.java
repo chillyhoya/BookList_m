@@ -23,6 +23,7 @@ import com.baidu.mapapi.map.Marker;
 import com.baidu.mapapi.map.MarkerOptions;
 import com.baidu.mapapi.map.OverlayOptions;
 import com.baidu.mapapi.map.TextOptions;
+import com.baidu.mapapi.map.TextureMapView;
 import com.baidu.mapapi.model.LatLng;
 import com.example.booklist.data.ShopLoader;
 import com.example.booklist.data.model.Shop;
@@ -40,13 +41,13 @@ public class MapViewFragment extends Fragment {
         // Required empty public constructor
     }
 
-    private MapView mapView=null;
+    private TextureMapView mapView=null;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view=inflater.inflate(R.layout.fragment_map_view, container, false);
-        mapView = (MapView)view.findViewById(R.id.bmapView);
+        mapView = (TextureMapView)view.findViewById(R.id.bmapView);
 
         BaiduMap baiduMap=mapView.getMap();
         //修改百度地图的初始位置

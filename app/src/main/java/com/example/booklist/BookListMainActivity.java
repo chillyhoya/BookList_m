@@ -69,12 +69,14 @@ public class BookListMainActivity extends AppCompatActivity {
         datas.add(new BookListFragment(bookAdapter));
         datas.add(new WebViewFragment());
         datas.add(new MapViewFragment());
+        datas.add(new GameFragment());
         myPageAdapter.setData(datas);
 
         ArrayList<String> titles = new ArrayList<String>();
         titles.add("图书");
         titles.add("新闻");
         titles.add("卖家");
+        titles.add("游戏");
         myPageAdapter.setTitles(titles);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tablayout);
@@ -168,7 +170,7 @@ public class BookListMainActivity extends AppCompatActivity {
         listBooks.add(new Book("软件项目管理案例教程（第4版）",R.drawable.book_2));
         listBooks.add(new Book("创新工程实践",R.drawable.book_no_name));
         listBooks.add(new Book("信息安全数学基础（第2版）",R.drawable.book_1));
-    }
+}
 
     public class BookAdapter extends ArrayAdapter<Book> {
 
